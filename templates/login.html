@@ -1,0 +1,38 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>LOGIN</title>
+    {% load static %}
+<link rel="stylesheet" href="{% static 'login.css' %}">
+
+</head>
+<body>
+    
+   
+    <div class="box">
+        <form method="POST" action="login_user">
+            {% csrf_token %}
+            <h1>LOGIN</h1>
+            <div class="ibox">
+                <span class="icon"><ion-icon name="person"></ion-icon></span>
+                <input type="text" name="Username" placeholder="Enter Username" required />
+            </div>
+            <div class="ibox">
+                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                <input type="password" name="password" placeholder="Enter Password" required />
+            </div>
+            <div class="sbutton"><button type="submit" class="">LOGIN</button></div>
+            <div class="register"><p>Don't have an account?
+                <a href="\signup">SignUp</a></p>
+            </div
+        </form>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<head>
+    <title>SignUp</title>
+    {%load static%}
+    <link rel="stylesheet" href="{%static 'signup.css'%}">
+    
+
+</head>
+
+
+
+
+<body>
+    <div class="box">
+        <form action="signup" method="POST">
+            {% csrf_token %}
+            <h1>
+                SIGNUP
+            </h1>
+            <div class="ibox">
+                <span class="icon"><ion-icon name="person"></ion-icon></span>
+                <input type="text" name="uname" placeholder="Enter Username" required/>
+            </div>
+            <div class="ibox">
+                <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                <input type="email" name="mail" placeholder="Enter Email" required/>
+            </div>
+            <div class="ibox">
+                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                <input type="password" name="password1" placeholder="Enter Password" required/>
+            </div>
+            <div class="ibox">
+                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                <input type="password" name="password2" placeholder="Retype Password" required/>
+            </div>
+
+            <div class="sbutton"><button type="submit">Register</button></div>
+        </form>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>

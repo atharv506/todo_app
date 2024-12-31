@@ -1,0 +1,120 @@
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+    background-color: #000000; /* Optional background color */
+}
+.box {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    background:transparent;
+
+    width: 400px;
+    height: 450px;
+    border-radius: 20px; /* Optional rounded corners */
+    border: 5px solid;
+    box-shadow: 0 0 10px rgba(36, 16, 16, 0.2); /* Optional shadow */
+    border-color: rgb(78, 68, 68);
+}
+
+.box:hover{
+    border: 5px solid #0ef;
+    box-shadow: 0 0 20px#0ef, inset 0 0 20px #0ef;
+}
+
+
+.ibox {
+
+display: flex;
+margin-top: 30px;
+flex-direction: column;
+margin-bottom: 40px;
+width: 350px;
+
+}
+.ibox input{
+width: 300px;
+height: 50px;
+background: transparent;
+border: 2px solid #333;
+outline: none;
+border-radius: 5px;
+
+color: #fff;
+padding: 0 10px 0 35px;
+transition: 0.5s;
+
+}
+input::placeholder{
+color: rgba(255, 255, 255, 0.3);
+}
+.box:hover .ibox input{
+border: 2px solid #0ef;
+box-shadow: 0 0 12px #0ef, inset 0 0 10px #0ef;
+}
+button{
+position: relative;
+width: 100%;
+position: relative;
+width: 100%;
+height: 45px;
+background: #333;
+border: none;
+outline: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 1em;
+color: #fff;
+font-weight: 500;
+transition: 0.5s;
+}
+
+.box:hover button{
+background: #0ef;
+color: black;
+box-shadow: 0 0 20px #0ef;
+}
+
+.register{
+font-size: .9em;
+text-align: center;
+margin: 25px;
+margin-top: 25px;
+}
+.register p {
+color: #fff;
+}
+.register p a{
+color: #333;
+text-decoration: none;
+font-weight: 600;
+}
+.register p a:hover{
+text-decoration: underline;
+}
+.box:hover .register p a{
+color: #0ef;
+}
+h1{
+font-size: 2em;
+text-align: center;
+color: #fff;
+}
+.box:hover h1{
+color: #0ef;
+}
+.ibox .icon{
+    
+    position: absolute;
+    padding-left: 9px;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 59px;
+}
+.box:hover .ibox .icon{
+color: #0ef;
+}      
