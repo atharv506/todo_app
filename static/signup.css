@@ -13,7 +13,7 @@ body{
     align-items: center; /* Center children horizontally */
     background:transparent;
     width: 400px;
-    height: 420px;
+    height: 430px;
     border-radius: 20px;
     border: 5px solid #ffdbdb;
 }
@@ -48,7 +48,7 @@ h1{
 font-size: 2em;
 text-align: center;
 color: #fff;
-margin-bottom: 18px;
+margin-bottom: 10px;
 }
 .box:hover h1{
 color: #0ef;
@@ -82,4 +82,16 @@ transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 background: #0ef;
 color: black;
 box-shadow: 0 0 20px #0ef,inset 0 0 10px #0ef;
+}
+.messages {
+    
+    text-align: center; 
+    margin-bottom: 1px; 
+}
+
+.messages .warning {
+    font-size: 0.5rem;
+    color: red;
+    font-weight: bold;
+
 }

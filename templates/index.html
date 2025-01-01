@@ -1,16 +1,25 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'index.css' %}">
 <body>
+    <head><title>ToDo App</title></head>
 
 <nav class="navbar">
 
     <p class="brand">ToDo App</p>
+    
 
 <ul class="nav-links">
     <li><a href="login_user" class="LINKS">Login</a></li>
     <li><a href="signup" class="LINKS">SignUp</a></li>
+    <li><a href="signout" class="LINKS">Logut</a></li>
 </ul>
 </nav>
+<!--<div class="text"><h1>WELCOME &nbsp {{username}}</h1></div>-->
+<div class="text">
+    {% if username %}
+        <h1>WELCOME &nbsp {{ username }}</h1>
+    {% endif %}
+</div>
 
 <h1>This is a demo text</h1>
 

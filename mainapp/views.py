@@ -2,14 +2,20 @@ from django.shortcuts import render,redirect
 
 # Create your views here.
 from django.http import HttpResponse
-
+from django.contrib import messages
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate,login
+from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
 
 
-def demo(request):
-    return render(request,"index.html")
+#def main(request):
+ #   return render(request,"index.html")
+def main(request):
+    if request.user.is_authenticated:
+        return render(request, "index.html", {'username': request.user.username})
+    else:
+        return render(request, "index.html")
+
 
 
 def login_user(request):
@@ -18,7 +24,8 @@ def login_user(request):
         password = request.POST['password']
         user = authenticate(request,username=username,password= password)
         if user is not None:
-            login(request,user)            
+            login(request,user)  
+            
             return render(request,"index.html",{'username':username})
         else:
             
@@ -35,7 +42,13 @@ def signup(request):
         if password1 == password2:
             user = User.objects.create_user(username=username,email=email,password= password1)
             user.save()
-            return redirect('demo')
+            return redirect('login_user')
+        else:
+            messages.warning(request, "Passwords do not match. Please try again.")
     return render(request,"signup.html")    
 
 
+def signout(request):
+    logout(request)
+    return redirect('login_user')
+    
