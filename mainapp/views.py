@@ -6,15 +6,18 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
+from mainapp.models import TODO
+from  mainapp.forms import TODOform
 
 
 #def main(request):
  #   return render(request,"index.html")
 def main(request):
+    form = TODOform()
     if request.user.is_authenticated:
-        return render(request, "index.html", {'username': request.user.username})
+        return render(request, "index.html", context= {'username': request.user.username ,'form':form})
     else:
-        return render(request, "index.html")
+        return render(request, "index.html")   
 
 
 

@@ -10,6 +10,7 @@ body {
     background-color: #030705; /* Website background */
     color: #d6d3cb;
     margin: 0;
+    padding: 0;
 }
 
 /* Navbar Styles */
@@ -54,4 +55,26 @@ p {
 
 h1 .text{
     color: wheat;
+}
+
+
+
+
+
+.container {
+    display: flex; /* Arrange children horizontally */
+    justify-content: space-around; /* Add equal spacing between items */
+    align-items: center; /* Center items vertically */
+    margin-top: 10%; 
+}
+
+/* Common Box Styling */
+.bcon {
+    border: 2px solid red;
+    width: 400px;
+    height: 450px;
+    display: flex;
+    flex-direction: column; /* Stacks the header and any other content vertically */
+    font-family: Arial, sans-serif; /* Add font styling */
+    background-color: white; /* Optional background for better visibility */
 }
